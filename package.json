@@ -2,7 +2,7 @@
   "name": "yfb_3",
   "version": "3.0.0",
   "description": "乙方宝",
-  "author": "GaoZimeng",
+  "author": "LiMingxing",
   "private": true,
   "scripts": {
     "dev": "node build/dev-server.js",
