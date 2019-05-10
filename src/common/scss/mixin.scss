@@ -1,0 +1,48 @@
+$font: 16;
+$screen: 720;
+
+@function px2rem($n) {
+  @return #{$n/($font*$screen/320)}rem;
+}
+
+/*
+ * 二倍屏幕
+ */
+@mixin border1px($color) {
+/*   @media screen and
+ (-webkit-min-device-pixel-ratio: 2),
+  (min-device-pixel-ratio: 2)
+  { */
+    // position: relative;
+    // &::after{
+    //   content: '';
+    //   display: block;
+    //   position: absolute;
+    //   bottom: 0;
+    //   left: 0;
+    //   right: 0;
+    //   width: 100%;
+    //   z-index: 1;
+    //   height: 2px;
+    //   background: $color;
+    //   transform-origin: bottom;
+    //   transform: scaleY(0.5);
+    // }
+    border-bottom: 1px solid $color;
+  /*}*/
+}
+
+@mixin bg-img($url) {
+  @media screen and
+  (-webkit-min-device-pixel-ratio: 2),
+  (min-device-pixel-ratio: 2)
+  {
+    background-image: url($url+'@2x.png');
+  }
+  @media screen and
+  (-webkit-min-device-pixel-ratio: 3),
+  (min-device-pixel-ratio: 3)
+  {
+    background-image: url($url+'@3x.png');
+  }
+}

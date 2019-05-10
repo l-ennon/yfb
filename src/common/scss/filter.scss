@@ -1,0 +1,73 @@
+
+@import "../../common/scss/mixin.scss";
+.filter {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  max-height: 800%;
+  transform-origin: top;
+  transform: scaleY(0);
+  border-top: 1px solid #d8d8d8;
+  transition: all .2s ease-in-out;
+  opacity: 0;
+  visibility: hidden;
+  &.open {
+    transform: scaleY(1);
+    transform-origin: top;
+    transition: all .2s ease-in-out;
+    opacity: 1;
+    visibility: visible;
+  }
+}
+.filter-header {
+  position: relative;
+  z-index: 1;
+}
+.filter-area {
+  padding-bottom: px2rem(90);
+}
+.filter-category {
+  height: 800%;
+}
+
+.area-pick, .option-pick {
+  bottom: px2rem(90) !important;
+  .area-name, .option-name {
+    line-height: 45px;
+    height: 45px;
+    font-size: 14px;
+    text-align: center;
+  }
+  .selected {
+    background: #fff;
+    color: #0094fe;
+  }
+}
+.filter-option {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background: #fff;
+  height: px2rem(90);
+  padding: 0 px2rem(75);
+  border-top: 1px solid #f2f2f2;
+  .filter-option-btn {
+    flex: 1;
+    button {
+      display: block;
+      height: px2rem(60);
+      width: px2rem(230);
+      margin: auto;
+      font-size: 14px;
+    }
+    .confirm {
+      background: #0094fe;
+      color: #fff;
+    }
+    .cancel {
+      box-sizing: border-box;
+      border: 1px solid #666;
+    }
+  }
+}

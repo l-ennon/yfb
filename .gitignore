@@ -1,0 +1,9 @@
+.DS_Store
+node_modules/
+dist/
+策划/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+策划/
+.idea

@@ -1,0 +1,6 @@
+$font: 16;
+$screen: 750;
+
+@function px2rem($n) {
+  @return #{$n/($font*$screen/320)}rem
+}

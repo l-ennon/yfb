@@ -1,0 +1,115 @@
+@charset "UTF-8";
+$baseColor: #0094fe;
+// $baseColor: #46a5fe;
+.icon {
+  width: 1em;
+  height: 1em;
+  vertical-align: -0.15em;
+  fill: currentColor;
+  overflow: hidden;
+}
+.column {
+  overflow: hidden;
+  display: flex;
+  flex-flow: column nowrap;
+}
+.row {
+  display: flex;
+  flex-flow: row nowrap;
+}
+.main-center {
+  justify-content: center; // 主轴
+  align-items: center; // 交叉轴
+}
+.main-start {
+  justify-content: flex-start;
+}
+.main-end {
+  justify-content: flex-end;
+}
+.main-between {
+  justify-content: space-between;
+}
+.main-justify {
+  justify-content: space-around;
+}
+.main-full {
+  align-items: stretch;
+}
+.input-group {
+  @extend .row;
+}
+.btn-group {
+  @extend .row;
+  @extend .main-center;
+}
+.absolute {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+h1{
+  font-size: 18px;
+}
+h2{
+  font-size: 14px;
+}
+a{
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  &:active, &:visited, &:link {
+    text-decoration: none;
+  }
+}
+input{
+  outline: none;
+  border: none;
+}
+.t-center {
+  text-align: center;
+}
+.t-green {
+  color: #41be54;
+}
+.t-white {
+  color: #fff;
+}
+.t-orange {
+  color: #fe7a34
+}
+.t-yellow {
+  color: #eed817;
+}
+.t-red {
+  color: #db233b;
+}
+.t-blue {
+  color: $baseColor !important;
+}
+.t-gray {
+  color: #757575 !important;
+}
+.t-dgray {
+  color: #666;
+}
+.bg-white {
+  background: #fff;
+}
+.bg-yellow {
+  background: #ffcc00;
+}
+.bg-dgray {
+  background: #757575;
+}
+.bg-blue {
+  background: $baseColor !important;
+}
+.bg-red {
+  background: #f5544a
+}
+.bg-gray {
+  background: #f2f2f2 !important;
+}
